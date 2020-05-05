@@ -4,7 +4,7 @@ import { json } from "body-parser";
 import enforce from "express-sslify";
 import dotenv from "dotenv";
 
-import TestRouter from "./api/test";
+import MessageRouter from "./api/message";
 
 dotenv.config();
 
@@ -23,7 +23,7 @@ if (!dev && process.env.ENFORCE_HTTPS) {
 }
 
 // Set up API routes
-server.use("/api/test", TestRouter);
+server.use("/api/message", MessageRouter);
 
 // Start server and serve Next.js app when applicable
 (async () => {
