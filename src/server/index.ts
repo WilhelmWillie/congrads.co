@@ -1,4 +1,5 @@
 import express, { Request, Response } from "express";
+import mongoose from "mongoose";
 import next from "next";
 import { json } from "body-parser";
 import enforce from "express-sslify";
@@ -15,6 +16,8 @@ const port = process.env.PORT || 3000;
 
 const server = express();
 server.use(json());
+
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/congrads');
 
 // Enforce HTTPS in production
 if (!dev && process.env.ENFORCE_HTTPS) {
