@@ -5,7 +5,9 @@ import { Message } from "../models";
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-  const messages = await Message.find({});
+  const messages = await Message.find({
+    isPublic: true,
+  });
 
   return res.json({
     data: messages
