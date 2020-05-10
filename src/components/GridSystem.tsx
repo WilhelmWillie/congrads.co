@@ -1,5 +1,6 @@
-import React from "react";
 import styled from "styled-components";
+
+import { FlexContainer, FlexItem } from "./Flex";
 
 const Container = styled.div`
   max-width: 1024px;
@@ -8,6 +9,14 @@ const Container = styled.div`
   margin-right: auto;
 `;
 
+const Row = styled(FlexContainer)`
+`;
+
+const Column = styled(FlexItem)`
+`;
+
 export {
-  Container
+  Container,
+  Row,
+  Column
 }
