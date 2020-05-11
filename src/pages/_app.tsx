@@ -1,15 +1,9 @@
 import React from 'react'
 import NextApp from 'next/app'
-import { ThemeProvider, createGlobalStyle } from 'styled-components'
-import reset from "styled-reset";
+import { ThemeProvider } from 'styled-components'
 
-const theme = {
-  primary: 'green',
-}
-
-const GlobalStyles = createGlobalStyle`
-  ${reset}
-`;
+import GlobalStyles from "../styles/global";
+import theme from "../styles/theme";
 
 export default class App extends NextApp {
   render() {

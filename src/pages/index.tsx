@@ -43,7 +43,9 @@ const Landing = () => {
             <TextInput placeholder="Last Name" />
           </FormSection>
 
-          <Button type="submit">Submit</Button>
+          <FormSection>
+            <Button type="submit">Submit</Button>
+          </FormSection>
         </Form>
       </Section>
     </Container>

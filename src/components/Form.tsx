@@ -2,19 +2,29 @@ import styled from 'styled-components';
 
 import { FlexContainer, FlexItem } from "./Flex";
 
-const Form = styled.form``;
-
-const FormSection = styled(FlexContainer).attrs(props => ({
-  direction: "column"
-}))`
-  padding: 12px 0;
+const Form = styled.form`
+  width: 100%;
 `;
 
-const Label = styled.label``;
+const FormSection = styled(FlexContainer)`
+  flex-direction: column;
+  padding: 16px 0;
+  flex-basis: 100%;
+`;
+
+const Label = styled.label`
+  margin-bottom: 16px;
+`;
 
 const TextInput = styled.input.attrs(props => ({
   type: "text"
-}))``;
+}))`
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid black;
+  padding: 12px;
+  cursor: pointer;
+`;
 
 export {
   Form,
