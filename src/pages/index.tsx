@@ -1,11 +1,13 @@
 import React from 'react';
 
-import { Head } from "../components";
+import { Head, NavBar, Hero } from "../components";
 
 const Landing = () => {
   return (
     <>
       <Head />
+      <NavBar />
+      <Hero />
     </>
   )
 };

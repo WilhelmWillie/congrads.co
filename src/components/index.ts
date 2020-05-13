@@ -12,3 +12,6 @@ export {
 export { default as Section } from "./Section";
 
 export { default as Head } from "./Head";
+
+export { default as Hero } from "./Hero";
+export { default as NavBar } from "./NavBar";
