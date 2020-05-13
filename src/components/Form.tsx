@@ -23,7 +23,6 @@ const TextInput = styled.input.attrs(props => ({
   border-radius: 4px;
   border: 1px solid black;
   padding: 12px;
-  cursor: pointer;
 `;
 
 export {
