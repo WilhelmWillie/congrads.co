@@ -1,9 +1,13 @@
 import React from 'react';
 
+import { Container } from "../../components";
+
 const New = () => {
   return (
     <div>
-      <h1>New</h1>
+      <Container>
+        <h1>New</h1>
+      </Container>
     </div>
   )
 };
