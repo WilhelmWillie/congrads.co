@@ -2,7 +2,7 @@ import { css } from 'styled-components';
 
 const Typography = css`
   body {
-    font-family: sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
   }
 

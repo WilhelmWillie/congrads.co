@@ -7,6 +7,9 @@ const Button = styled.button`
   border: 1px solid black;
   padding: 18px 32px;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  color: #FFFFFF;
 
   &:hover {
     border-color: red;
