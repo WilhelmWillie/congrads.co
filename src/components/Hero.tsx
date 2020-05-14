@@ -13,7 +13,7 @@ const Hero = () => {
           <FlexItem basis="52%">
             <HeroText>
               <h1>Send some love to your favorite graduate.</h1>
-              <p>Send a personalized message to a graduate and/or add to their digital yearbook</p>
+              <p>Send a personalized message to a graduate 🎓🎉</p>
             </HeroText>
 
             <Link href="/msg/new" passHref>
