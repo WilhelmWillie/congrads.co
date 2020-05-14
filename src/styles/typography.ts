@@ -2,8 +2,9 @@ import { css } from 'styled-components';
 
 const Typography = css`
   body {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Jost', sans-serif;
     font-size: 16px;
+    color: ${({theme}) => theme.colors.dark};
   }
 
   h1 {
@@ -34,6 +35,10 @@ const Typography = css`
     font-size: 16px;
     font-weight: 300;
     line-height: 20px;
+  }
+
+  a {
+    color: ${({theme}) => theme.colors.primary};
   }
 `;
 

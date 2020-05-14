@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Link from "next/link";
 
-import { Container, FlexContainer, FlexItem } from "./";
+import { Container, FlexContainer, FlexItem, Button } from "./";
 
 const NavBar = () => {
   return (
@@ -9,19 +9,21 @@ const NavBar = () => {
       <Container>
         <FlexContainer justifyBetween alignCenter>
           <FlexItem>
-            <Logo>congrads</Logo>
+            <Link href="/" passHref>
+              <Logo>Congrads</Logo>
+            </Link>
           </FlexItem>
 
           <FlexItem>
-            <FlexContainer>
+            <FlexContainer alignCenter>
               <MenuItem>
                 <Link href="/featured">
-                  featured
+                  <a>Featured</a>
                 </Link>
               </MenuItem>
               <MenuItem>
-                <Link href="/msg/new">
-                  send a message
+                <Link href="/msg/new" passHref>
+                  <Button as="a">Send a message</Button>
                 </Link>
               </MenuItem>
             </FlexContainer>
@@ -38,17 +40,25 @@ const Wrapper = styled.div`
 
 const Logo = styled.a`
   font-size: 24px;
-  font-weight: 500;
-  color: #262626;
+  font-weight: 900;
+  border-bottom: 4px solid ${({theme}) => theme.colors.primary};
+  padding-bottom: 4px;
+  text-decoration: none;
+  color: ${({theme}) => theme.colors.dark};
 `;
 
 const MenuItem = styled(FlexItem)`
   padding: 0 18px;
 
   a {
-    font-weight: 300;
+    font-weight: 400;
     text-decoration: none;
-    color: #3C3C3C;
+    color: ${({theme}) => theme.colors.dark};
+    transition: 0.1s all;
+    
+    &:hover {
+      color: ${({theme}) => theme.colors.primary};
+    }
   }
 `;
 

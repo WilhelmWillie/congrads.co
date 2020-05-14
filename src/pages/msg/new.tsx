@@ -5,7 +5,7 @@ import { Head, Container, Form, FormSection, Label, TextInput, Button } from "..
 const New = () => {
   return (
     <div>
-      <Head title="congrads.co - create a message for a graduate" />
+      <Head title="Congrads - Create a message for a graduate" />
       <Container>
         <h1>send a congrads.co message</h1>
 

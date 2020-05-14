@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Head, NavBar, Hero } from "../components";
+import { Head, NavBar, Hero, Footer } from "../components";
 
 const Landing = () => {
   return (
@@ -8,6 +8,7 @@ const Landing = () => {
       <Head />
       <NavBar />
       <Hero />
+      <Footer />
     </>
   )
 };

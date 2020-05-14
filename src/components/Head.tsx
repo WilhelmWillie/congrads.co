@@ -8,9 +8,9 @@ type HeadProps = {
 const Head = ({ title, description } : HeadProps) => {
   return (
     <NextHead>
-      <title>{ title || "congrads.co - send love to your favorite graduates"}</title>
+      <title>{ title || "Congrads - Send love to your favorite graduates"}</title>
 
-      <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;500;700;900&display=swap" rel="stylesheet" />
     </NextHead>
   )
 }

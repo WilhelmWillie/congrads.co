@@ -3,23 +3,26 @@ import Link from "next/link";
 
 import { Container, Button, FlexContainer, FlexItem} from "./";
 
+import GraduationCapSVG from "../assets/grad_cap.svg";
+
 const Hero = () => {
   return (
     <Wrapper>
       <Container>
-        <FlexContainer>
-          <FlexItem basis="60%">
+        <FlexContainer justifyBetween>
+          <FlexItem basis="52%">
             <HeroText>
-              <h1>send some love to your favorite graduate.</h1>
-              <p>send a personalized message to a graduate and add to their digital yearbook</p>
+              <h1>Send some love to your favorite graduate.</h1>
+              <p>Send a personalized message to a graduate and/or add to their digital yearbook</p>
             </HeroText>
 
             <Link href="/msg/new" passHref>
-              <ActionButton as="a">send love</ActionButton>
+              <ActionButton primary big as="a">♥ Send Love</ActionButton>
             </Link>
           </FlexItem>
 
-          <FlexItem basis="39%">
+          <FlexItem basis="40%">
+            <GradCap src={GraduationCapSVG} />
           </FlexItem>
         </FlexContainer>
       </Container>
@@ -28,7 +31,7 @@ const Hero = () => {
 }
 
 const Wrapper = styled.div`
-  padding: 100px 0;
+  padding: 120px 0 180px;
 `;
 
 const HeroText = styled.div`
@@ -44,11 +47,10 @@ const HeroText = styled.div`
 
 const ActionButton = styled(Button)`
   margin-top: 32px;
-  color: #FFFFFF;
-  background: #489FB5;
-  border-radius: 50px;
-  border: none;
-  font-size: 20px;
+`;
+
+const GradCap = styled.img`
+  width: 100%;
 `;
 
 export default Hero;
