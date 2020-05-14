@@ -5,16 +5,17 @@ const Button = styled.button`
   font-size: 16px;
   background: transparent;
   border-radius: 50px;
-  border: 1px solid black;
+  border: 2px solid ${({theme}) => theme.colors.dark};
   padding: 18px 32px;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  color: #FFFFFF;
+  color: ${({theme}) => theme.colors.dark};
 
   ${is('primary')`
     background: ${({theme}) => theme.colors.primary};
     border: 2px solid transparent;
+    color: #FFFFFF;
   `};
 
   ${is('large')`

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Head, NavBar, Container, Footer, Form, FormSection, Label, TextInput, Button } from "../../components";
+import { Head, NavBar, Container, Footer, Form, FormSection, Label, TextInput, Button, FlexItem } from "../../components";
 
 const New = () => {
   return (
@@ -40,9 +40,10 @@ const New = () => {
             <TextInput as="textarea" rows={4} placeholder="Congrats on your graduation..." />
           </FormSection>
 
-          <FormSection>
-            <Button primary big>Submit</Button>
-          </FormSection>
+          <ActionSection justifyBetween>
+            <FlexItem basis="48%"><Button big>Preview</Button></FlexItem>
+            <FlexItem basis="48%"><Button primary big>Submit</Button></FlexItem>
+          </ActionSection>
         </Form>
       </StyledContainer>
       <Footer />
@@ -60,6 +61,14 @@ const NewMessageDescription = styled.div`
   p {
     font-size: 24px;
     line-height: 36px;
+  }
+`;
+
+const ActionSection = styled(FormSection)`
+  flex-direction: row;
+
+  button {
+    width: 100%;
   }
 `;
 
