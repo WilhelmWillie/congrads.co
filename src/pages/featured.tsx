@@ -1,10 +1,15 @@
 import React from 'react';
 
+import { Head, NavBar, Hero, Footer } from "../components";
+
 const Featured = () => {
   return (
-    <div>
-      <h1>Featured</h1>
-    </div>
+    <>
+      <Head />
+      <NavBar />
+      <Hero />
+      <Footer />
+    </>
   )
 };
 
