@@ -17,11 +17,6 @@ const NavBar = () => {
           <FlexItem>
             <FlexContainer alignCenter>
               <MenuItem>
-                <Link href="/featured">
-                  <a>Featured</a>
-                </Link>
-              </MenuItem>
-              <MenuItem>
                 <Link href="/msg/new" passHref>
                   <Button as="a">Send a message</Button>
                 </Link>
