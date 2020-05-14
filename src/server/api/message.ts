@@ -4,6 +4,10 @@ import { Message } from "../models";
 
 const router = express.Router();
 
+function generateSlug() {
+  return (Math.random()*1000).toString(36).slice(3,8).toUpperCase()
+}
+
 router.get("/", async (req, res) => {
   const messages = await Message.find({
     isPublic: true,
@@ -35,7 +39,15 @@ router.post("/new", async (req, res) => {
   const body = req.body;
 
   try {
-    const newMessage = new Message(body);
+    let generatedSlug = generateSlug();
+    let existingMessage = await Message.findOne({slug: generatedSlug});
+
+    while(!!existingMessage) {
+      generatedSlug = generateSlug();
+      existingMessage = await Message.findOne({slug: generatedSlug});
+    }
+
+    const newMessage = new Message({...body, slug: generatedSlug});
     await newMessage.save();
 
     return res.json({

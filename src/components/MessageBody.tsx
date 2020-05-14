@@ -5,7 +5,7 @@ const MessageBody = ({ body, senderName }) => {
   return (
     <Wrapper>
     <Container>
-        <h2>Message from Willie</h2>
+        <h2>Message from {senderName}</h2>
         <MessageCard>
           <p>{body}</p>
           <From>- {senderName}</From>

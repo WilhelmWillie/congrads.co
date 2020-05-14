@@ -4,6 +4,35 @@ import styled from 'styled-components';
 import { Head, NavBar, Container, Footer, Form, FormSection, Label, TextInput, Button, FlexItem } from "../../components";
 
 const New = () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+
+    const graduateName = form.graduateName.value;
+    const graduateSchool = form.graduateSchool.value;
+    const tagline = form.tagline.value;
+    const senderName = form.senderName.value;
+    const body = form.body.value;
+
+    const formData = {
+      graduateName,
+      graduateSchool,
+      tagline,
+      senderName,
+      body
+    };
+
+    await fetch("/api/message/new", {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+    });
+  }
+
   return (
     <>
       <Head title="Congrads - Create a message for a graduate" />
@@ -14,30 +43,30 @@ const New = () => {
           <p>Create a personalized message to your favorite graduate! Include photos, memories, and more in your message to add a personal touch.</p>
         </NewMessageDescription>
 
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <FormSection>
             <Label>Graduate's Name</Label>
-            <TextInput placeholder="Jane Doe" />
+            <TextInput placeholder="Jane Doe" name="graduateName" />
           </FormSection>
 
           <FormSection>
             <Label>Graduate's School</Label>
-            <TextInput placeholder="University of Southern California" />
+            <TextInput placeholder="University of Southern California" name="graduateSchool" />
           </FormSection>
 
           <FormSection>
             <Label>Message Tagline</Label>
-            <TextInput placeholder="An awesome graduate who deserves the world" />
+            <TextInput placeholder="An awesome graduate who deserves the world" name="tagline" />
           </FormSection>
 
           <FormSection>
             <Label>Your Name</Label>
-            <TextInput placeholder="John Doe" />
+            <TextInput placeholder="John Doe" name="senderName" />
           </FormSection>
 
           <FormSection>
             <Label>Your Message</Label>
-            <TextInput as="textarea" rows={4} placeholder="Congrats on your graduation..." />
+            <TextInput as="textarea" rows={4} placeholder="Congrats on your graduation..." name="body" />
           </FormSection>
 
           <ActionSection justifyBetween>

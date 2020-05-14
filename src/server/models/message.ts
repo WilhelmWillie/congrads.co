@@ -2,16 +2,10 @@ import mongoose from "mongoose";
 
 const messageSchema = new mongoose.Schema({
   senderName: String,
-  senderEmail: {
-    type: String,
-    required: true,
-  },
+  senderEmail: String,
   graduateName: String,
   graduateSchool: String,
-  graduateEmail: {
-    type: String,
-    required: false,
-  },
+  graduateEmail: String,
   body: String,
   tagline: String,
   photos: [{
