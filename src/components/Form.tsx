@@ -20,7 +20,7 @@ const TextInput = styled.input.attrs(props => ({
   type: "text"
 }))`
   font-size: 16px;
-  border-radius: 4px;
+  border-radius: 8px;
   border: 1px solid black;
   padding: 12px;
 `;

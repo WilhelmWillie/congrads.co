@@ -1,13 +1,15 @@
 import React from 'react';
 
-import { Head, Container, Form, FormSection, Label, TextInput, Button } from "../../components";
+import { Head, NavBar, Container, Footer, Form, FormSection, Label, TextInput, Button } from "../../components";
 
 const New = () => {
   return (
-    <div>
+    <>
       <Head title="Congrads - Create a message for a graduate" />
+      <NavBar />
       <Container>
-        <h1>send a congrads.co message</h1>
+        <h1>Create a message</h1>
+        <p>Create a personalized message to your favorite graduate! Include photos, memories, and more in your message to add a personal touch.</p>
 
         <Form>
           <FormSection>
@@ -30,7 +32,8 @@ const New = () => {
           </FormSection>
         </Form>
       </Container>
-    </div>
+      <Footer />
+    </>
   )
 };
 

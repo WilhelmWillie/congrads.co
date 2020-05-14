@@ -5,10 +5,7 @@ import { Head, NavBar, Hero, Footer } from "../components";
 const Landing = () => {
   return (
     <>
-      <Head />
-      <NavBar />
-      <Hero />
-      <Footer />
+      <h1>Terminating this project for the time being.</h1>
     </>
   )
 };
